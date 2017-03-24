@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <title>Crypt</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="crypt-form-container">
+
+                <form>
+                    <div class="form-control">
+                        <label class="form-label" for="url">Site</label>
+                        <input class="form-input" type="text" id="url" name="url">
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label" for="folder_id">Folder</label>
+                        <select class="form-input" name="folder_id" id="folder_id">
+                            <option selected value="">none</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label" for="security_clearance">Level</label>
+                        <select class="form-input" name="security_clearance" id="security_clearance">
+                            <option value="0">normal</option>
+                            <option value="1">confidential</option>
+                            <option value="2">secret</option>
+                            <option value="3">top secret</option>
+                            <option selected value="4">crypto</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="user_id" name="user_id">
+                    <div class="form-control">
+                        <button class="form-button" type="button" id="send" >Crypt It</button>
+                    </div>
+                </form>
+            </div>
+            <p style="display: none" id="token-not-set-message">Please visit the <a href="options.html">options page</a> to login first</p>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
